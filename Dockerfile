@@ -53,8 +53,8 @@ RUN `
 
 # Set environment variables to suppress prompts during installation
 ENV PYTHON_VERSION=3.10.9 \
-    PYTHON_HOME="C:\\Python310" \
-    PATH="${PATH};C:\\Python310;C:\\Python310\\Scripts"
+    PYTHON_HOME=C:\\Python310 \
+    PATH=${PATH};C:\\Python310;C:\\Python310\\Scripts
 
 # Download and install Python 3.10
 RUN powershell -Command `
