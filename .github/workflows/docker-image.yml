@@ -31,7 +31,7 @@ jobs:
       with:
         registry: ${{ env.REGISTRY }}
         username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+        password: ${{ secrets.TOKEN_GITHUB }}
    
       # BuildX is not supported and should not be installed or configured
       # Features such as multistage builds and cache support are not available
