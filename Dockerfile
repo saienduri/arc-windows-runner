@@ -59,8 +59,8 @@ ENV PATH="${PATH};C:\\Python310;C:\\Python310\\Scripts"
 # Download and install Python 3.10
 RUN powershell -Command `
     $ErrorActionPreference = 'Stop'; `
-    Invoke-WebRequest -Uri "https://www.python.org/ftp/python/${env:PYTHON_VERSION}/python-${env:PYTHON_VERSION}-amd64.exe" -OutFile "C:\\python-installer.exe"; `
-    Start-Process -Wait -FilePath "C:\\python-installer.exe" -ArgumentList '/quiet InstallAllUsers=1 PrependPath=1'; `
+    Invoke-WebRequest -Uri https://www.python.org/ftp/python/${env:PYTHON_VERSION}/python-${env:PYTHON_VERSION}-amd64.exe -OutFile C:\\python-installer.exe; `
+    Start-Process -Wait -FilePath C:\\python-installer.exe -ArgumentList '/quiet InstallAllUsers=1 PrependPath=1'; `
     Remove-Item "C:\\python-installer.exe"
 
 # Verify Python installation
